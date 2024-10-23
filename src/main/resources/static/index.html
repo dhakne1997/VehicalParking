@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Parking Management</h1>
+    
+    <h2>Park a Vehicle</h2>
+    <form id="parkForm">
+        <label for="licensePlate">License Plate:</label>
+        <input type="text" id="licensePlate" required>
+        <label for="vehicleType">Vehicle Type:</label>
+        <select id="vehicleType" required>
+            <option value="2-wheeler">2-wheeler</option>
+            <option value="4-wheeler">4-wheeler</option>
+        </select>
+        <button type="submit">Park</button>
+    </form>
+
+    <h2>Remove a Vehicle</h2>
+    <form id="removeForm">
+        <label for="removeLicensePlate">License Plate:</label>
+        <input type="text" id="removeLicensePlate" required>
+        <button type="submit">Remove</button>
+    </form>
+
+    <h2>Parking Spots</h2>
+    <table id="parkingSpots">
+        <thead>
+            <tr>
+                <th>Spot ID</th>
+                <th>Type</th>
+                <th>Occupied</th>
+                <th>License Plate</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="parking.js"></script>
+</body>
+</html>
